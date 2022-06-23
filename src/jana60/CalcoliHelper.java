@@ -12,4 +12,13 @@ public class CalcoliHelper {
 	 * metodi della vostra classe di helper (con un esempio per ogni casistica)
 	 */
 
+	// costruttore private
+	private CalcoliHelper() {
+
+	}
+
+	public static int somma(int x, int y) {
+		return x + y;
+	}
+
 }
