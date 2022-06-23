@@ -17,8 +17,57 @@ public class CalcoliHelper {
 
 	}
 
+	// metodi
+
+	// metodo somma
 	public static int somma(int x, int y) {
 		return x + y;
+	}
+
+	// metodo sottrazione
+	public static int sottrazione(int x, int y) {
+		return x - y;
+	}
+
+	// metodo differenza
+	public static int differenza(int x, int y) {
+		if (x >= y) {
+			return x - y;
+		} else {
+			return y - x;
+		}
+	}
+
+	// metodo moltiplicazione
+	public static int moltiplicazione(int x, int y) {
+		return x * y;
+	}
+
+	// metodo valore assoluto
+	public static int valoreAssoluto(int x) {
+		if (x >= 0) {
+			return x;
+		} else {
+			return -x;
+		}
+	}
+
+	// metodo minimo tra due interi
+	public static int minimo(int x, int y) {
+		if (x >= y) {
+			return y;
+		} else {
+			return x;
+		}
+	}
+
+	// metodo massimo tra due interi
+	public static int massimo(int x, int y) {
+		if (x >= y) {
+			return x;
+		} else {
+			return y;
+		}
 	}
 
 }
