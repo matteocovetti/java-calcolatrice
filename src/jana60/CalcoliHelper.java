@@ -135,4 +135,34 @@ public class CalcoliHelper {
 		}
 	}
 
+	/*
+	 * BONUS2: aggiungete il metodo per l’elevamento a potenza che prende come
+	 * parametri due numeri interi (base ed esponente) e ritorna la base elevata
+	 * all’esponente. Occhio che sia la base che l’esponente potrebbero essere
+	 * uguali a zero oppure numeri negativi! (caso esponente = 0 e base = 0 anche se
+	 * in matematica sarebbe un numero indefinito usiamo l’approccio informatico che
+	 * lo calcola come 1)
+	 */
+
+	// metodo calcolo potenza
+	public static long potenza(int base, int esponente) {
+		if (base == 0 || esponente == 0) {
+			return 1;
+		} else if (esponente < 0) {
+			long result = 1;
+			while (esponente != 0) {
+				result *= base;
+				esponente++;
+			}
+			return result;
+		} else {
+			long result = 1;
+			while (esponente != 0) {
+				result *= base;
+				esponente--;
+			}
+			return result;
+		}
+	}
+
 }

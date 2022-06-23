@@ -58,6 +58,13 @@ public class CalcoliTest {
 		System.out.println("Il valore massimo è: " + CalcoliHelper.massimo(15.34, 6.44));
 		System.out.println("Il valore massimo è: " + CalcoliHelper.massimo(2.48, 9.54));
 		System.out.println("Il valore massimo è: " + CalcoliHelper.massimo(15.34, 15.34));
+
+		// prova potenza
+		System.out.println("Il valore della potenza è: " + CalcoliHelper.potenza(2, 4));
+		System.out.println("Il valore della potenza è: " + CalcoliHelper.potenza(2, -4));
+		System.out.println("Il valore della potenza è: " + CalcoliHelper.potenza(0, 5));
+		System.out.println("Il valore della potenza è: " + CalcoliHelper.potenza(5, 0));
+		System.out.println("Il valore della potenza è: " + CalcoliHelper.potenza(-2, 3));
 	}
 
 }
