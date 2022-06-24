@@ -108,7 +108,7 @@ public class CalcoliHelper {
 		}
 	}
 
-	// overload minimo tra due interi
+	// overload minimo tra due double
 	public static double minimo(double x, double y) {
 		if (x >= y) {
 			return y;
@@ -126,7 +126,7 @@ public class CalcoliHelper {
 		}
 	}
 
-	// overload massimo tra due interi
+	// overload massimo tra due double
 	public static double massimo(double x, double y) {
 		if (x >= y) {
 			return x;
@@ -145,24 +145,41 @@ public class CalcoliHelper {
 	 */
 
 	// metodo calcolo potenza
-	public static long potenza(int base, int esponente) {
-		if (base == 0 || esponente == 0) {
-			return 1;
-		} else if (esponente < 0) {
-			long result = 1;
-			while (esponente != 0) {
-				result *= base;
-				esponente++;
+//	public static long potenza(int base, int esponente) {
+//		if (base == 0 || esponente == 0) {
+//			return 1;
+//		} else if (esponente < 0) {
+//			long result = 1;
+//			while (esponente != 0) {
+//				result *= base;
+//				esponente++;
+//			}
+//			return result;
+//		} else {
+//			long result = 1;
+//			while (esponente != 0) {
+//				result *= base;
+//				esponente--;
+//			}
+//			return result;
+//		}
+//	}
+
+	public static double potenza(int base, int esponente) {
+		// se esponente == 0 -> potenza =1
+		double potenza = 1;
+		// se esponente != 0
+		if (esponente != 0) {
+			// calcolo potenza del valore assoluto di esponente
+			for (int i = 0; i < valoreAssoluto(esponente); i++) {
+				potenza *= base;
 			}
-			return result;
-		} else {
-			long result = 1;
-			while (esponente != 0) {
-				result *= base;
-				esponente--;
-			}
-			return result;
 		}
+		// se esponente < 0 inverto la potenza
+		if (esponente < 0) {
+			potenza = 1 / potenza;
+		}
+		return potenza;
 	}
 
 }
